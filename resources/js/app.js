@@ -34,11 +34,6 @@ Vue.component('app-chat', require('./components/Chat.vue').default);
 Vue.component('app-header', require('./components/Header.vue').default);
 Vue.component('app-message-composer', require('./components/MessageComposer.vue').default);
 
-// const app = new Vue({
-//     el: '#app',
-//     render: h => h(app)
-// });
-
 
 const app = new Vue({
     el: '#app',

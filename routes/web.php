@@ -23,4 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/contacts', 'ContactsController@get');
+
+Route::get('/conversation/{id}', 'MessageController@getMessagesFor');
+
+Route::post('/conversation/send', 'MessageController@send');
