@@ -30,10 +30,18 @@ Vue.use(VueChatScroll)
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('app-chat', require('./components/Chat.vue'));
+Vue.component('app-chat', require('./components/Chat.vue').default);
 Vue.component('app-header', require('./components/Header.vue'));
 Vue.component('app-message-composer', require('./components/MessageComposer.vue'));
 
+// const app = new Vue({
+//     el: '#app',
+//     render: h => h(app)
+// });
+
+
 const app = new Vue({
     el: '#app',
-});
+    // render: h => h(app),
+    // components: { app }
+  })

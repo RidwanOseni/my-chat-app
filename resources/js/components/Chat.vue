@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Conversation from './conversation.vue';
+import Conversation from './Conversation.vue';
 
 
 
@@ -35,13 +35,13 @@ export default {
                     },
                 };
             },
-            mounted() {
+            // mounted() {
 
-                axios.get('/contacts')
-                    .then((response) => {
-                        this.contacts = response.data;
-                    });
-            },
+            //     axios.get('/contacts')
+            //         .then((response) => {
+            //             this.contacts = response.data;
+            //         });
+            // },
             methods: {
                 selectContact(value){
 
