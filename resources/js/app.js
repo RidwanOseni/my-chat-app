@@ -31,8 +31,8 @@ Vue.use(VueChatScroll)
  */
 
 Vue.component('app-chat', require('./components/Chat.vue').default);
-Vue.component('app-header', require('./components/Header.vue'));
-Vue.component('app-message-composer', require('./components/MessageComposer.vue'));
+Vue.component('app-header', require('./components/Header.vue').default);
+Vue.component('app-message-composer', require('./components/MessageComposer.vue').default);
 
 // const app = new Vue({
 //     el: '#app',
@@ -42,6 +42,4 @@ Vue.component('app-message-composer', require('./components/MessageComposer.vue'
 
 const app = new Vue({
     el: '#app',
-    // render: h => h(app),
-    // components: { app }
   })
