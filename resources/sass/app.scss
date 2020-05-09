@@ -6,3 +6,377 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.container
+{
+    max-width: 500 !important;
+    margin: auto;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    height: auto;
+    // background-color: #C1CAD6
+}
+
+.card-body
+{
+    padding: 0px;
+}
+
+.private-chat-section
+{
+    width:  100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    height: auto;
+}
+
+.chat-header.row
+{
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #C1CAD6 !important;
+    width: 100% !important;
+    padding-left: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+    height: auto;
+}
+
+.img-area.col-md-6
+{
+    width: 100%;
+}
+
+.profile-image-here
+{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+
+.profile-image-here img
+{
+ width: 70px;
+ border-radius: 50%;
+ margin-right: 0px;
+  height: 70px;
+}
+
+.show-status
+
+{
+  width: auto;
+  margin-top: 20px;
+  float: left;
+  padding-left: 15px;
+}
+
+.show-status h5
+{
+color: #423e37;
+margin-bottom: 0%;
+font-size: 20px;
+}
+
+.show-status h6
+{
+font-size: 10px;
+color: #423e37;
+}
+
+.chat-header-icon
+{
+    width: auto;
+    display: flex;
+    padding: 0% !important;
+    font-size: 25px;
+}
+
+.chat-header-icon i
+{
+    color: #011638;
+    cursor: pointer;
+    width: auto;
+    padding: 5px;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.nav-item
+{
+    list-style-type: none;
+}
+
+.toggle-btn
+{
+    padding-top: 10px;
+    width: auto;
+    float: left;
+    margin-left: 10px;
+}
+
+.bar-icon
+{
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+    color: #011638;
+}
+
+.chat-area
+{
+    display: flex;
+    height: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.conversation
+{
+    display: flex;
+    width: 100%;
+
+}
+
+.msg-provider
+{
+    width: 80% !important;
+    background-color: #ede3e4;
+}
+
+.chat-output-box
+{
+    width: 100% !important;
+    overflow: hidden;
+    padding: 0px !important;
+    height: 100%;
+    max-height: 600px;
+    overflow: scroll;
+    background-color: #ede3e4;
+    color: #001514;
+}
+
+ul
+{
+    // list-style-type: none;
+    padding: 5px;
+}
+
+ul.message
+{
+    list-style-type: none;
+    // margin: 10px;
+    width: 100%;
+    padding: 5px;
+
+}
+
+.received
+{
+    text-align: right;
+}
+
+.received li
+{
+    background-color: #c7d9b7;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 210px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+.sent
+{
+        text-align: left;
+}
+
+.sent li
+{
+    background-color: #f1fffa;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 210px;
+    padding-left: 10px;
+    margin: 10px;
+}
+
+.contact.card-body
+{
+    background-color: #ede3e4;
+}
+
+.contact-list
+{
+   margin-left: 5px;
+   width: 20% !important;
+
+}
+
+.contact ul
+{
+    list-style-type: none;
+    padding-left: 0;
+    background-color: #ede3e4;
+    height: 100%;
+
+}
+
+.selected
+{
+    background-color: #D1D3C4;
+}
+
+.placeholder
+{
+    display: flex;
+    border-bottom: 1px solid #BDC696;
+    padding: 2px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.placeholder img
+{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.contact.card-body
+{
+    max-height: 600px;
+    overflow: scroll;
+    padding: 0px;
+}
+
+.contact p
+{
+    width: 70%;
+    margin-bottom: 5px;
+    overflow: hidden;
+    margin-left: 5px;
+    font-size: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #423e37;
+
+}
+
+p.name
+{
+    font-weight: bold;
+}
+
+.chat-input-area
+{
+    height: 8rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #C1CAD6;
+    width: 100%;
+}
+
+.input-field
+{
+    background-color: gray !important;
+    width: 100% !important;
+    margin-right: 5px;
+    border-radius: 10px !important;
+    border: 2px;
+    padding: 10px 8px 10px 8px;
+    height: auto;
+    margin-top: 20px;
+}
+
+input {
+    border-radius: 10px;
+    height: 3rem;
+    width: 80% !important;
+}
+
+.input-field-icon
+{
+    width: 20%;
+    padding-left: 10px;
+    padding-top: 12px;
+    float: right;
+    color: #011638;
+}
+
+.input-field-icon i
+{
+    cursor: pointer;
+}
+
+.msg-input
+{
+    padding: 0px !important;
+    display: flex;
+    width: 80%;
+    background-color: #f9f8f8;
+    border-radius: 10px;
+}
+
+.chatbot-section
+{
+    width: 100%;
+    background-color: #fbfff1;
+    border: none;
+
+}
+
+.chatbot-area
+{
+    width: auto;
+    background-color: #bed8d4;
+}
+
+.chatbot-output-box
+{
+    height: auto;
+    width: 100%;
+    padding: 0px !important;
+}
+
+.chatbot-header
+{
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: rgb(220, 255, 229) !important;
+    width: 100% !important;
+    padding-left: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+    height: 56px;
+}
+
+center
+{
+    padding-top: 15px;
+}

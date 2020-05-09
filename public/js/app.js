@@ -50635,15 +50635,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_chat_scroll__WEBPACK_IMPORTED
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-chat', __webpack_require__(/*! ./components/Chat.vue */ "./resources/js/components/Chat.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-header', __webpack_require__(/*! ./components/Header.vue */ "./resources/js/components/Header.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-message-composer', __webpack_require__(/*! ./components/MessageComposer.vue */ "./resources/js/components/MessageComposer.vue")["default"]); // const app = new Vue({
-//     el: '#app',
-//     render: h => h(app)
-// });
-
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-message-composer', __webpack_require__(/*! ./components/MessageComposer.vue */ "./resources/js/components/MessageComposer.vue")["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app' // render: h => h(app),
-  // components: { app }
-
+  el: '#app'
 });
 
 /***/ }),
