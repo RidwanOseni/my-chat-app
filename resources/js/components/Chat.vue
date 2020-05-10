@@ -17,6 +17,10 @@ export default {
 
 
             props: {
+                user: {
+                    type: Object,
+                    required: true
+                },
                 messages: {
                 type: Array,
                 default() {
@@ -35,13 +39,6 @@ export default {
                     },
                 };
             },
-            // mounted() {
-
-            //     axios.get('/contacts')
-            //         .then((response) => {
-            //             this.contacts = response.data;
-            //         });
-            // },
             methods: {
                 selectContact(value){
 
@@ -57,6 +54,7 @@ export default {
                 text: text
             }).then((response) => {
                 this.newMessage = response.data;
+                location = window.location.href;
             })
             .catch(err => {
                 console.log(err.response.data);

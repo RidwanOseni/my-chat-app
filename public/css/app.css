@@ -11103,6 +11103,10 @@ ul.message {
   padding: 0px;
 }
 
+.contact {
+  width: 100%;
+}
+
 .contact p {
   width: 70%;
   margin-bottom: 5px;
@@ -11118,6 +11122,23 @@ ul.message {
 
 p.name {
   font-weight: bold;
+}
+
+span.unread {
+  background: #541388;
+  color: white;
+  position: absolute;
+  right: 11px;
+  top: 25px;
+  display: flex;
+  font-weight: 700;
+  min-width: 20px;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+  font-size: 11px;
+  padding: 0 4px;
+  border-radius: 5px;
 }
 
 .chat-input-area {
