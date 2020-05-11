@@ -20,9 +20,17 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 import Vue from 'vue'
-
+import VueRouter from 'vue-router';
 import VueChatScroll from 'vue-chat-scroll'
+import { routes } from './routes';
+
 Vue.use(VueChatScroll)
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    routes,
+    mode: 'history'
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -33,8 +41,10 @@ Vue.use(VueChatScroll)
 Vue.component('app-chat', require('./components/Chat.vue').default);
 Vue.component('app-header', require('./components/Header.vue').default);
 Vue.component('app-message-composer', require('./components/MessageComposer.vue').default);
+Vue.component('app-game', require('./components/Game.vue').default);
 
 
 const app = new Vue({
     el: '#app',
+    router,
   })

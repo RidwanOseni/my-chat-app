@@ -42,7 +42,11 @@
                             aria-expanded="false"><i class="bar-icon fas fa-bars"></i></a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Group Chat</a>
-                            <a class="dropdown-item" href="#">Play Game</a>
+
+                            <router-link to="/game">Play Game</router-link>
+
+
+
                         </div>
                     </li>
                 </ul>

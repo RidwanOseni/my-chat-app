@@ -2,8 +2,10 @@
     <div class="container">
 
             <app-header :contact="selectedContact"></app-header>
+            <router-view></router-view>
             <app-conversation @selectedContact="selectContact" :newMessage="newMessage"></app-conversation>
             <app-message-composer  @send="sendMessage"></app-message-composer>
+
 
     </div>
 </template>
