@@ -7041,7 +7041,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".text-center[data-v-3a2c79dd] {\n  text-align: center;\n}\n.healthbar[data-v-3a2c79dd] {\n  width: 80%;\n  height: 40px;\n  background-color: #eee;\n  margin: auto;\n  transition: width 500ms;\n}\n.controls[data-v-3a2c79dd], .log[data-v-3a2c79dd] {\n  margin-top: 30px;\n  text-align: center;\n  padding: 10px;\n  border: 1px solid #ccc;\n  box-shadow: 0px 3px 6px #ccc;\n}\n.turn[data-v-3a2c79dd] {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-weight: bold;\n  font-size: 22px;\n}\n.log ul[data-v-3a2c79dd] {\n  list-style: none;\n  font-weight: bold;\n  text-transform: uppercase;\n}\n.log ul li[data-v-3a2c79dd] {\n  margin: 5px;\n}\n.log ul .player-turn[data-v-3a2c79dd] {\n  color: blue;\n  background-color: #e4e8ff;\n}\n.log ul .monster-turn[data-v-3a2c79dd] {\n  color: red;\n  background-color: #ffc0c1;\n}\nbutton[data-v-3a2c79dd] {\n  font-size: 20px;\n  background-color: #eee;\n  padding: 12px;\n  box-shadow: 0 1px 1px black;\n  margin: 10px;\n}\n#start-game[data-v-3a2c79dd] {\n  background-color: #aaffb0;\n}\n#start-game[data-v-3a2c79dd]:hover {\n  background-color: #76ff7e;\n}\n#attack[data-v-3a2c79dd] {\n  background-color: #ff7367;\n}\n#attack[data-v-3a2c79dd]:hover {\n  background-color: #ff3f43;\n}\n#special-attack[data-v-3a2c79dd] {\n  background-color: #ffaf4f;\n}\n#special-attack[data-v-3a2c79dd]:hover {\n  background-color: #ff9a2b;\n}\n#heal[data-v-3a2c79dd] {\n  background-color: #aaffb0;\n}\n#heal[data-v-3a2c79dd]:hover {\n  background-color: #76ff7e;\n}\n#give-up[data-v-3a2c79dd] {\n  background-color: #ffffff;\n}\n#give-up[data-v-3a2c79dd]:hover {\n  background-color: #c7c7c7;\n}", ""]);
+exports.push([module.i, ".app-game[data-v-3a2c79dd] {\n  justify-content: center;\n  margin: 0px;\n  position: relative;\n  width: 100%;\n}\n.game-process[data-v-3a2c79dd] {\n  justify-content: center;\n}\n.you[data-v-3a2c79dd] {\n  width: 40%;\n}\n.monster[data-v-3a2c79dd] {\n  width: 40%;\n}\n.text-center[data-v-3a2c79dd] {\n  text-align: center;\n}\n.row[data-v-3a2c79dd] {\n  margin-left: 0px;\n}\n.row .controls[data-v-3a2c79dd] {\n  width: 100%;\n  justify-content: center;\n}\n.row .log[data-v-3a2c79dd] {\n  justify-content: center;\n  margin-right: 0px;\n}\n.text-center .monster-turn[data-v-3a2c79dd] {\n  right: 30px;\n}\n.healthbar[data-v-3a2c79dd] {\n  width: 80%;\n  height: 40px;\n  background-color: #eee;\n  margin: auto;\n  transition: width 500ms;\n}\n.controls[data-v-3a2c79dd], .log[data-v-3a2c79dd] {\n  margin-top: 30px;\n  text-align: center;\n  padding: 10px;\n  border: 1px solid #ccc;\n  box-shadow: 0px 3px 6px #ccc;\n}\n.turn[data-v-3a2c79dd] {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  font-weight: bold;\n  font-size: 22px;\n}\n.log ul[data-v-3a2c79dd] {\n  list-style: none;\n  font-weight: bold;\n  text-transform: uppercase;\n}\n.log ul li[data-v-3a2c79dd] {\n  margin: 5px;\n}\n.log ul .player-turn[data-v-3a2c79dd] {\n  color: blue;\n  background-color: #e4e8ff;\n}\n.log ul .monster-turn[data-v-3a2c79dd] {\n  color: red;\n  background-color: #ffc0c1;\n}\nbutton[data-v-3a2c79dd] {\n  font-size: 20px;\n  background-color: #eee;\n  padding: 12px;\n  box-shadow: 0 1px 1px black;\n  margin: 10px;\n}\n#start-game[data-v-3a2c79dd] {\n  background-color: #aaffb0;\n}\n#start-game[data-v-3a2c79dd]:hover {\n  background-color: #76ff7e;\n}\n#attack[data-v-3a2c79dd] {\n  background-color: #ff7367;\n}\n#attack[data-v-3a2c79dd]:hover {\n  background-color: #ff3f43;\n}\n#special-attack[data-v-3a2c79dd] {\n  background-color: #ffaf4f;\n}\n#special-attack[data-v-3a2c79dd]:hover {\n  background-color: #ff9a2b;\n}\n#heal[data-v-3a2c79dd] {\n  background-color: #aaffb0;\n}\n#heal[data-v-3a2c79dd]:hover {\n  background-color: #76ff7e;\n}\n#give-up[data-v-3a2c79dd] {\n  background-color: #ffffff;\n}\n#give-up[data-v-3a2c79dd]:hover {\n  background-color: #c7c7c7;\n}", ""]);
 
 // exports
 
@@ -44441,8 +44441,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "app-game" }, [
-    _c("section", { staticClass: "row" }, [
-      _c("div", { staticClass: "small-6 columns" }, [
+    _c("section", { staticClass: "row game-process" }, [
+      _c("div", { staticClass: "small-6 columns you" }, [
         _c("h1", { staticClass: "text-center" }, [_vm._v("YOU")]),
         _vm._v(" "),
         _c("div", { staticClass: "healthbar" }, [
@@ -44459,16 +44459,16 @@ var render = function() {
             },
             [
               _vm._v(
-                "\n                        " +
+                "\n                    " +
                   _vm._s(_vm.playerHealth) +
-                  "\n                    "
+                  "\n                "
               )
             ]
           )
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "small-6 columns" }, [
+      _c("div", { staticClass: "small-6 columns monster" }, [
         _c("h1", { staticClass: "text-center" }, [_vm._v("MONSTER")]),
         _vm._v(" "),
         _c("div", { staticClass: "healthbar" }, [
@@ -44485,9 +44485,9 @@ var render = function() {
             },
             [
               _vm._v(
-                "\n                        " +
+                "\n                    " +
                   _vm._s(_vm.monsterHealth) +
-                  "\n                    "
+                  "\n                "
               )
             ]
           )
@@ -44497,7 +44497,7 @@ var render = function() {
     _vm._v(" "),
     !_vm.gameIsRunning
       ? _c("section", { staticClass: "row controls" }, [
-          _c("div", { staticClass: "small-12 columns" }, [
+          _c("div", { staticClass: "small-12 columns new-game-box" }, [
             _c(
               "button",
               { attrs: { id: "start-game" }, on: { click: _vm.startGame } },
@@ -44551,9 +44551,9 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                        " +
+                      "\n                    " +
                         _vm._s(turn.text) +
-                        "\n\n                    "
+                        "\n\n                "
                     )
                   ]
                 )

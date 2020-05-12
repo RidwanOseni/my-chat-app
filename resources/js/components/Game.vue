@@ -1,49 +1,49 @@
 <template>
     <div class="app-game">
 
-        <section class="row">
-                <div class="small-6 columns">
-                    <h1 class="text-center">YOU</h1>
-                    <div class="healthbar">
-                        <div
-                            class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: playerHealth + '%'}">
-                            {{ playerHealth }}
-                        </div>
+        <section class="row game-process">
+            <div class="small-6 columns you">
+                <h1 class="text-center">YOU</h1>
+                <div class="healthbar">
+                    <div
+                        class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: playerHealth + '%'}">
+                        {{ playerHealth }}
                     </div>
                 </div>
-                <div class="small-6 columns">
-                    <h1 class="text-center">MONSTER</h1>
-                    <div class="healthbar">
-                        <div
-                            class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: monsterHealth + '%'}">
-                            {{ monsterHealth }}
-                        </div>
+            </div>
+            <div class="small-6 columns monster">
+                <h1 class="text-center">MONSTER</h1>
+                <div class="healthbar">
+                    <div
+                        class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: monsterHealth + '%'}">
+                        {{ monsterHealth }}
                     </div>
                 </div>
-            </section>
-            <section class="row controls" v-if="!gameIsRunning">
-                <div class="small-12 columns">
-                    <button id="start-game" @click="startGame">START NEW GAME</button>
-                </div>
-            </section>
-            <section class="row controls" v-else>
-                <div class="small-12 columns">
-                    <button id="attack" @click="attack">ATTACK</button>
-                    <button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
-                    <button id="heal" @click="heal">HEAL</button>
-                    <button id="give-up" @click="giveUp">GIVE UP</button>
-                </div>
-            </section>
-            <section class="row log" v-if="turns.length > 0">
-                <div class="small-12 columns">
-                    <ul>
-                        <li v-for="turn in turns" :key="turn" :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
-                            {{ turn.text }}
+            </div>
+        </section>
+        <section class="row controls" v-if="!gameIsRunning">
+            <div class="small-12 columns new-game-box">
+                <button id="start-game" @click="startGame">START NEW GAME</button>
+            </div>
+        </section>
+        <section class="row controls" v-else>
+            <div class="small-12 columns">
+                <button id="attack" @click="attack">ATTACK</button>
+                <button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
+                <button id="heal" @click="heal">HEAL</button>
+                <button id="give-up" @click="giveUp">GIVE UP</button>
+            </div>
+        </section>
+        <section class="row log" v-if="turns.length > 0">
+            <div class="small-12 columns">
+                <ul>
+                    <li v-for="turn in turns" :key="turn" :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
+                        {{ turn.text }}
 
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
     </div>
 </template>
@@ -143,9 +143,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.app-game {
+    justify-content: center;
+    margin: 0px;
+    // padding-left: 10px ;
+    position: relative;
+    // left: 80px;
+    width: 100%;
+}
+.game-process
+{
+    justify-content: center;
+}
+.you
+{
+    width: 40%;
+}
+.monster
+{
+    width: 40%;
+}
 .text-center {
     text-align: center;
+}
+
+.row
+{
+    margin-left: 0px;
+}
+.row .controls
+{
+    width: 100%;
+    justify-content: center;
+}
+
+.row .log
+{
+    justify-content: center;
+    margin-right: 0px;
+}
+
+.text-center .monster-turn
+{
+    right: 30px;
 }
 
 .healthbar {
