@@ -2,7 +2,6 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Message;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -30,14 +29,4 @@ $factory->define(User::class, function (Faker $faker) {
 });
 
 
-$factory->define(Message::class, function (Faker $faker) {
-    do {
-        $from = rand(1, 15);
-        $to = rand(1, 15);
-    }while ($from === $to);
-    return [
-        'from' => $from,
-        'to' => $to,
-        'text' => $faker -> sentence,
-    ];
-});
+
