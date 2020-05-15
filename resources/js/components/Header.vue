@@ -41,11 +41,13 @@
                         <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                             aria-expanded="false"><i class="bar-icon fas fa-bars"></i></a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Group Chat</a>
+                            <div class="dropdown-content">
+                            <router-link to="/groupchat" tag="li" active-class="active"><a>Group Chat</a></router-link>
 
-                            <router-link to="/game">Play Game</router-link>
 
+                            <router-link to="/game" tag="li" active-class="active"><a>Game</a></router-link>
 
+                            </div>
 
                         </div>
                     </li>

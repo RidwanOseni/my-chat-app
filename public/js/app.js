@@ -2371,6 +2371,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     contact: {
@@ -44572,6 +44574,30 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GroupChat.vue?vue&type=template&id=047f85c8&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GroupChat.vue?vue&type=template&id=047f85c8& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "groupchat" })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Header.vue?vue&type=template&id=1f42fb90&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Header.vue?vue&type=template&id=1f42fb90& ***!
@@ -44617,22 +44643,38 @@ var render = function() {
           _c("li", { staticClass: "nav-item dropdown" }, [
             _vm._m(2),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "dropdown-menu" },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Group Chat")]
-                ),
-                _vm._v(" "),
-                _c("router-link", { attrs: { to: "/game" } }, [
-                  _vm._v("Play Game")
-                ])
-              ],
-              1
-            )
+            _c("div", { staticClass: "dropdown-menu" }, [
+              _c(
+                "div",
+                { staticClass: "dropdown-content" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: "/groupchat",
+                        tag: "li",
+                        "active-class": "active"
+                      }
+                    },
+                    [_c("a", [_vm._v("Group Chat")])]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: "/game",
+                        tag: "li",
+                        "active-class": "active"
+                      }
+                    },
+                    [_c("a", [_vm._v("Game")])]
+                  )
+                ],
+                1
+              )
+            ])
           ])
         ])
       ])
@@ -60003,6 +60045,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-chat', __webpack_requi
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-header', __webpack_require__(/*! ./components/Header.vue */ "./resources/js/components/Header.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-message-composer', __webpack_require__(/*! ./components/MessageComposer.vue */ "./resources/js/components/MessageComposer.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-game', __webpack_require__(/*! ./components/Game.vue */ "./resources/js/components/Game.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app-groupchat', __webpack_require__(/*! ./components/GroupChat.vue */ "./resources/js/components/GroupChat.vue")["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   router: router
@@ -60353,6 +60396,59 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/GroupChat.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/GroupChat.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GroupChat_vue_vue_type_template_id_047f85c8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GroupChat.vue?vue&type=template&id=047f85c8& */ "./resources/js/components/GroupChat.vue?vue&type=template&id=047f85c8&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _GroupChat_vue_vue_type_template_id_047f85c8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GroupChat_vue_vue_type_template_id_047f85c8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/GroupChat.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GroupChat.vue?vue&type=template&id=047f85c8&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/GroupChat.vue?vue&type=template&id=047f85c8& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupChat_vue_vue_type_template_id_047f85c8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GroupChat.vue?vue&type=template&id=047f85c8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GroupChat.vue?vue&type=template&id=047f85c8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupChat_vue_vue_type_template_id_047f85c8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GroupChat_vue_vue_type_template_id_047f85c8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Header.vue":
 /*!********************************************!*\
   !*** ./resources/js/components/Header.vue ***!
@@ -60571,10 +60667,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _components_Game_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Game.vue */ "./resources/js/components/Game.vue");
+/* harmony import */ var _components_GroupChat_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/GroupChat.vue */ "./resources/js/components/GroupChat.vue");
+
 
 var routes = [{
   path: '/game',
   component: _components_Game_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+}, {
+  path: '/groupchat',
+  component: _components_GroupChat_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
 
 /***/ }),

@@ -42,6 +42,7 @@ Vue.component('app-chat', require('./components/Chat.vue').default);
 Vue.component('app-header', require('./components/Header.vue').default);
 Vue.component('app-message-composer', require('./components/MessageComposer.vue').default);
 Vue.component('app-game', require('./components/Game.vue').default);
+Vue.component('app-groupchat', require('./components/GroupChat.vue').default);
 
 
 const app = new Vue({

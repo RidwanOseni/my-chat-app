@@ -10990,6 +10990,10 @@ a.text-dark:focus {
   color: #011638;
 }
 
+.dropdown-content {
+  padding-left: 5px;
+}
+
 .chat-area {
   display: flex;
   height: auto;
