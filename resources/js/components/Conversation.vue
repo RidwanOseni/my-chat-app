@@ -1,7 +1,7 @@
 <template>
     <div class="conversation">
 
-        <app-messages-provider :contact="selectedContact" :messages="messages" >
+        <app-messages-provider :contact="selectedContact" :messages="messages">
         </app-messages-provider>
 
 
@@ -47,9 +47,17 @@ export default {
                         this.contacts = response.data;
                     });
             },
+
+    watch:
+            {
+                newMessage: function (newValue){
+                    this.messages['0'].push(newValue);
+                }
+            },
+
     methods: {
 
-        startConversationWith(contact) {
+            startConversationWith(contact) {
             this.updateUnreadCount(contact, true);
                     axios.get(`/conversation/${contact.id}`)
                     .then((response) => {
@@ -68,7 +76,7 @@ export default {
                 this.messages.push(message);
                 return;
             }
-            console.log(message)
+
             this.updateUnreadCount(message.from_contact, false);
 
         },
@@ -77,7 +85,7 @@ export default {
                 if (single.id != contact.id) {
                     return single;
                 }
-                
+
                 if (reset)
                 single.unread = 0;
                 else

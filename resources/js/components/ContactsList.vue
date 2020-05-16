@@ -3,8 +3,11 @@
 
         <div class="contacts-list card">
             <div class="contact card-body">
+                <input type="text" v-model="search" placeholder="search contact"/>
+                <button @click="clearSearch()">Clear</button>
                 <ul>
                     <li v-for="contact in sortedContacts" :key="contact.id" @click="selectContact(contact)" :class="{'selected': contact == selected}">
+
                         <div class="placeholder">
                             <div class="img-case">
                                 <img src="https://via.placeholder.com/150" :alt="contact.name">
@@ -17,6 +20,7 @@
                         </div>
                     </li>
                 </ul>
+
             </div>
         </div>
 
@@ -35,6 +39,8 @@ export default {
     data: function () {
         return {
             selected: this.contacts.length ? this.contacts[0] : null,
+            search: '',
+
         }
     },
 
@@ -43,11 +49,20 @@ export default {
             this.selected = contact;
 
             this.$emit('selected', contact);
+        },
+        clearSearch() {
+         this.search = '';
         }
     },
     computed: {
         sortedContacts() {
-            return _.sortBy(this.contacts, [(contact) => {
+
+            if(this.search){
+      return this.contacts.filter((contact)=>{
+        return this.search.toLowerCase().split(' ').every(v => contact.name.toLowerCase().includes(v))
+      })
+      }else{
+        return _.sortBy(this.contacts, [(contact) => {
                 if (contact == this.selected) {
                     return Infinity;
                 }
@@ -55,6 +70,22 @@ export default {
                 return contact.unread;
             }]).reverse();
         }
-    }
+      }
+
+    },
+    // filteredContacts: function() {
+    //     this.searchTrack = 0;
+    //     if(this.search){
+    //   return this.contacts.filter((contact)=>{
+    //     return this.search.toLowerCase().split(' ').every(v => contact.name.toLowerCase().includes(v))
+    //   })
+    //   }else{
+    //     return this.contacts;
+    //   }
+    //     // return this.sortedContacts.filter((contact) => {
+    //     //     return contact.name.match(this.search);
+    //     // });
+    // }
+
 }
 </script>

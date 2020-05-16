@@ -54,8 +54,9 @@ export default {
                 contact_id: this.selectedContact.id,
                 text: text
             }).then((response) => {
+                this.$emit('new', response.data)
+
                 this.newMessage = response.data;
-                location = window.location.href;
             })
             .catch(err => {
                 console.log(err.response.data);

@@ -25,16 +25,18 @@
 
             <div class="col-md-4 no-gutters">
 
-                <div class="toggle-btn">
-                    <div class="btn-group btn-group-toggle toggle-btn"                  data-toggle="buttons">
-                        <label class="btn btn-secondary active">
-                            <input type="radio" name="options" id="option1" checked> Dark
-                        </label>
-                        <label class="btn btn-light">
-                            <input type="radio" name="options" id="option2"> Light
-                        </label>
+
+                    <div class="toggle-btn">
+                        <div class="btn-group btn-group-toggle toggle-btn"                  data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="option1" checked> Dark
+                            </label>
+                            <label class="btn btn-light">
+                                <input type="radio" name="options" id="option2"> Light
+                            </label>
+                        </div>
                     </div>
-                </div>
+                
 
                 <ul>
                     <li class="nav-item dropdown">

@@ -11043,7 +11043,7 @@ a.text-dark:focus {
 }
 
 ul {
-  padding: 5px;
+  padding: 0px !important;
 }
 
 ul.message {
