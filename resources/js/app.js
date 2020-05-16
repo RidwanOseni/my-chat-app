@@ -24,8 +24,15 @@ import VueRouter from 'vue-router';
 import VueChatScroll from 'vue-chat-scroll'
 import { routes } from './routes';
 
+
+
+
 Vue.use(VueChatScroll)
 Vue.use(VueRouter);
+
+
+
+
 
 const router = new VueRouter({
     routes,
@@ -40,6 +47,7 @@ const router = new VueRouter({
 
 Vue.component('app-chat', require('./components/Chat.vue').default);
 Vue.component('app-header', require('./components/Header.vue').default);
+Vue.component('app-darkmode', require('./components/DarkMode.vue').default);
 Vue.component('app-message-composer', require('./components/MessageComposer.vue').default);
 Vue.component('app-game', require('./components/Game.vue').default);
 Vue.component('app-groupchat', require('./components/GroupChat.vue').default);

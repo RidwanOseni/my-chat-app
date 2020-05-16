@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -8,6 +10,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -63,7 +66,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-sm btn-outline-primary text-center" style="margin-left: 110px" >
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -74,4 +77,16 @@
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue" style="margin-top: 20rem">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 @endsection

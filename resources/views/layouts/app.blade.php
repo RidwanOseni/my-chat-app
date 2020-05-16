@@ -14,7 +14,8 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <style>@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');</style>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <!-- Styles -->
@@ -24,9 +25,18 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                {{-- <a class="navbar_title" style="font-weight:bolder; color:red; font-family: Arial " href="{{ url('/') }}">Chat<span style="color:blue">Tech</span>
+
+                </a> --}}
+                <a class="navbar-brand" href="{{ url('/') }}"><span style="font-family: 'Indie Flower', cursive; font-size: larger; font-weight:bolder;" >Chat</span><span class="secondSpan" style="font-family: 'Indie Flower', cursive; font-size: larger; font-weight:bolder; color:#17c3b2">Tech</span></a>
+
+
+
+
+
+                {{-- <a class="navbar-brand" href="{{ url('/') }}"> --}}
+                    {{-- {{ config('app.name', 'Laravel') }} --}}
+                {{-- </a> --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -73,7 +83,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-0">
             @yield('content')
         </main>
     </div>

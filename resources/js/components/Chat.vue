@@ -17,7 +17,6 @@ import Conversation from './Conversation.vue';
 
 export default {
 
-
             props: {
                 user: {
                     type: Object,

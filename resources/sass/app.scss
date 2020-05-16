@@ -12,28 +12,47 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.carousel-item img
+{
+    width: 540px;
+    height: 500px;
+}
+
 .container
 {
     max-width: 500 !important;
     margin: auto;
     font-family: sans-serif;
     letter-spacing: 0.5px;
-    padding-left: 0% !important;
-    padding-right: 0% !important;
+    padding: 0% !important;
     height: auto;
-    // background-color: #C1CAD6
 }
 
 .card-body
 {
     padding: 0px;
+    background: #B5B2C2;
 }
 
+.navbar-brand a
+{
+    color: blueviolet;
+}
+
+.form-check-input
+{
+    width: 16px !important;
+    top: -18px;
+}
+
+.form-check-label
+{
+    margin-left: 5px;
+}
 .private-chat-section
 {
     width:  100% !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding: 0% !important;
     height: auto;
 }
 
@@ -70,7 +89,7 @@
  width: 70px;
  border-radius: 50%;
  margin-right: 0px;
-  height: 70px;
+height: 70px;
 }
 
 .show-status
@@ -178,8 +197,7 @@ color: #423e37;
 
 ul
 {
-    // list-style-type: none;
-    padding: 5px;
+    padding: 0px !important;
 }
 
 ul.message

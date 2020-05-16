@@ -53,7 +53,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-sm btn-outline-primary">
                                     {{ __('Login') }}
                                 </button>
 
@@ -65,9 +65,24 @@
                             </div>
                         </div>
                     </form>
+                    <div class="register text-center mt-3" style="">
+                        <small> Don't have an account? <span><a class="" href= "{{route('register')}}">Register here</a></span></small>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue" style="margin-top: 20rem">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 @endsection
