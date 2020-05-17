@@ -2055,20 +2055,7 @@ __webpack_require__.r(__webpack_exports__);
         }]).reverse();
       }
     }
-  } // filteredContacts: function() {
-  //     this.searchTrack = 0;
-  //     if(this.search){
-  //   return this.contacts.filter((contact)=>{
-  //     return this.search.toLowerCase().split(' ').every(v => contact.name.toLowerCase().includes(v))
-  //   })
-  //   }else{
-  //     return this.contacts;
-  //   }
-  //     // return this.sortedContacts.filter((contact) => {
-  //     //     return contact.name.match(this.search);
-  //     // });
-  // }
-
+  }
 });
 
 /***/ }),
