@@ -28,3 +28,5 @@ Route::get('/contacts', 'ContactsController@get');
 Route::get('/conversation/{id}', 'MessageController@getMessagesFor');
 
 Route::post('/conversation/send', 'MessageController@send');
+
+Route::resource('groups', 'GroupController');

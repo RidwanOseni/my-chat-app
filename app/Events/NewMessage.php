@@ -3,6 +3,7 @@
 namespace App\Events;
 
 use App\Message;
+use App\Conversation;
 use App\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -20,15 +21,17 @@ class NewMessage implements ShouldBroadcast
     // Message details
 
     public $message;
+    public $conversation;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Message $message)
+    public function __construct(Message $message, Conversation $conversation)
     {
         $this->message = $message;
+        $this->conversation = $conversation;
     }
 
     /**
@@ -39,6 +42,8 @@ class NewMessage implements ShouldBroadcast
     public function broadcastOn()
     {
         return new PrivateChannel('messages.' . $this->message->to);
+        
+        return new PrivateChannel('groups.' . $this->conversation->group->id);
     }
 
     public function broadcastWith()
@@ -46,5 +51,13 @@ class NewMessage implements ShouldBroadcast
         $this->message->load('fromContact');
 
         return ['message' => $this->message];
+
+        return [
+            'message' => $this->conversation->message,
+            'user' => [
+                'id' => $this->conversation->user->id,
+                'name' => $this->conversation->user->name,
+            ]
+        ];
     }
 }

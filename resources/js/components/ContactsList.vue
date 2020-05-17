@@ -3,8 +3,12 @@
 
         <div class="contacts-list card">
             <div class="contact card-body">
-                <input type="text" v-model="search" placeholder="search contact"/>
-                <button @click="clearSearch()">Clear</button>
+                <div class="conact-search">
+                    <form action="" class="form">
+                        <input type="text" class="form-control mr-3" v-model="search" placeholder="search contact"/>
+                    </form>
+                    <button style="margin-left:10px" class="btn btn-outline-primary" @click="clearSearch()">Clear</button>
+                </div>
                 <ul>
                     <li v-for="contact in sortedContacts" :key="contact.id" @click="selectContact(contact)" :class="{'selected': contact == selected}">
 
