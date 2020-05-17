@@ -2013,6 +2013,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     contacts: {
@@ -44356,38 +44358,41 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "contacts-list card" }, [
     _c("div", { staticClass: "contact card-body" }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.search,
-            expression: "search"
-          }
-        ],
-        attrs: { type: "text", placeholder: "search contact" },
-        domProps: { value: _vm.search },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+      _c("div", { staticClass: "contact-search" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search,
+              expression: "search"
             }
-            _vm.search = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
+          ],
+          attrs: { type: "text", placeholder: "search contact" },
+          domProps: { value: _vm.search },
           on: {
-            click: function($event) {
-              return _vm.clearSearch()
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search = $event.target.value
             }
           }
-        },
-        [_vm._v("Clear")]
-      ),
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-outline-primary btn-sm",
+            on: {
+              click: function($event) {
+                return _vm.clearSearch()
+              }
+            }
+          },
+          [_vm._v("Clear")]
+        )
+      ]),
       _vm._v(" "),
       _c(
         "ul",

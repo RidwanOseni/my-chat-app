@@ -195,12 +195,16 @@ color: #423e37;
     color: #001514;
 }
 
+.card
+{
+    border: 0px !important;
+}
 ul
 {
     padding: 0px !important;
 }
 
-.conact-search
+.contact-search
 {
     background: #C1CAD6;
 }
@@ -253,6 +257,7 @@ ul.message
 {
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .contact-list
@@ -354,7 +359,7 @@ span.unread
     height: 8rem;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 0px !important;
+    padding-top: 10px !important;
     padding-bottom: 10px;
     background-color: #C1CAD6;
     width: 100%;
