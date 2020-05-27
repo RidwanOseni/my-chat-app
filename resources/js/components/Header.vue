@@ -5,7 +5,7 @@
             <div class="image-area col-md-5">
 
                 <div class="profile-image-here">
-                    <img src="https://via.placeholder.com/150" :alt="contact.name">
+                    <img :src="getProfileImage()" :alt="contact.name">
                 </div>
 
                 <div class="show-status">
@@ -36,7 +36,7 @@
                             </label>
                         </div>
                     </div>
-                
+
 
                 <ul>
                     <li class="nav-item dropdown">
@@ -63,7 +63,19 @@
 </template>
 
 <script>
+// import Vue from 'vue';
+// import EventBus from './eventBus';
+
 export default {
+
+   
+    data: function () {
+        return {
+            profile_image: '',
+            contacts: []
+        }
+    },
+
     props: {
         contact: {
                 type: Object,
@@ -73,7 +85,24 @@ export default {
             }
         },
 
+     methods: {
+            getProfileImage() {
+                // const payLoad = {
+                // showImage:  "/storage/profile_images/"+ this.contact.id+"/"+this.contact.profile_image;
+                // return showImage;
 
+
+                // }
+
+                this.showImage = "/storage/profile_images/"+ this.contact.id+"/"+this.contact.profile_image;
+                this.$emit('showImage', this.showImage);
+                return this.showImage;
+
+            }
+        },
+        emitMethod() {
+            EventBus.$emit('showImage', payLoad);
+        }
     }
 </script>
 

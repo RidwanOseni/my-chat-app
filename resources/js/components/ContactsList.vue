@@ -5,14 +5,14 @@
             <div class="contact card-body">
                 <div class="contact-search">
                     <input type="text" v-model="search" placeholder="search contact"/>
-                    <button class="btn btn-outline-primary btn-sm" @click="clearSearch()">Clear</button>
+                    <button class="btn btn-outline-success btn-sm" @click="clearSearch()">Clear</button>
                 </div>
                 <ul>
                     <li v-for="contact in sortedContacts" :key="contact.id" @click="selectContact(contact)" :class="{'selected': contact == selected}">
 
                         <div class="placeholder">
                             <div class="img-case">
-                                <img src="https://via.placeholder.com/150" :alt="contact.name">
+                                <img :src="showImage" :alt="contact.name">
                             </div>
                             <div class="contact">
                                  <p class="name">{{contact.name}}</p>
@@ -30,11 +30,26 @@
 </template>
 
 <script>
+// import Vue from 'vue';
+// import EventBus from './eventBus';
+
 export default {
     props: {
         contacts: {
             type: Array,
             default: []
+        },
+        contact: {
+                type: Object,
+                default() {
+                    return {};
+                }
+            },
+        showImage: {
+            type: String,
+            default() {
+                return 'https://via.placeholder.com/150';
+            },
         }
     },
 
@@ -49,13 +64,18 @@ export default {
     methods: {
         selectContact(contact) {
             this.selected = contact;
-
             this.$emit('selected', contact);
         },
         clearSearch() {
          this.search = '';
-        }
+        },
     },
+    // mounted() {
+    //     EventBus.$on('showImage', (payLoad) => {
+    //         this.receiveImage(payLoad)
+    //   });
+    // },
+
     computed: {
         sortedContacts() {
 

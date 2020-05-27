@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-            <app-header :contact="selectedContact"></app-header>
+            <app-header :contact="selectedContact" ></app-header>
             <router-view></router-view>
             <app-conversation @selectedContact="selectContact" :newMessage="newMessage"></app-conversation>
             <app-message-composer  @send="sendMessage"></app-message-composer>
@@ -41,9 +41,9 @@ export default {
                 };
             },
             methods: {
-                selectContact(value){
+                selectContact(contact){
 
-                    this.selectedContact=value;
+                    this.selectedContact=contact;
                 },
                 sendMessage(text) {
             if (!this.selectedContact) {

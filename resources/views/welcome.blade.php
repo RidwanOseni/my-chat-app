@@ -1,8 +1,8 @@
     @extends('layouts.app')
 
     @section('content')
-    <div class="container mt-5">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide pt-5" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -31,6 +31,8 @@
 
     </div>
 
+    <div class="footer">
+
       <!-- Footer -->
     <footer class="page-footer font-small blue" style="margin-top: 10rem">
 
@@ -42,6 +44,8 @@
 
     </footer>
     <!-- Footer -->
+
+    </div>
 
 
     @endsection

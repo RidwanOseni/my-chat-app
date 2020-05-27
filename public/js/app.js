@@ -1946,8 +1946,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    selectContact: function selectContact(value) {
-      this.selectedContact = value;
+    selectContact: function selectContact(contact) {
+      this.selectedContact = contact;
     },
     sendMessage: function sendMessage(text) {
       var _this = this;
@@ -2015,11 +2015,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+// import Vue from 'vue';
+// import EventBus from './eventBus';
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     contacts: {
       type: Array,
       "default": []
+    },
+    contact: {
+      type: Object,
+      "default": function _default() {
+        return {};
+      }
+    },
+    showImage: {
+      type: String,
+      "default": function _default() {
+        return 'https://via.placeholder.com/150';
+      }
     }
   },
   data: function data() {
@@ -2037,6 +2051,11 @@ __webpack_require__.r(__webpack_exports__);
       this.search = '';
     }
   },
+  // mounted() {
+  //     EventBus.$on('showImage', (payLoad) => {
+  //         this.receiveImage(payLoad)
+  //   });
+  // },
   computed: {
     sortedContacts: function sortedContacts() {
       var _this = this;
@@ -2088,6 +2107,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+ // import EventBus from "./eventBus";
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -2398,7 +2418,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+// import Vue from 'vue';
+// import EventBus from './eventBus';
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {//   EventBus.$on("onload-event", function(contact) {
+    //       contacts = contact;
+    //       console.log(contacts)
+    //   });
+  },
+  data: function data() {
+    return {
+      profile_image: '',
+      contacts: []
+    };
+  },
   props: {
     contact: {
       type: Object,
@@ -2406,6 +2439,20 @@ __webpack_require__.r(__webpack_exports__);
         return {};
       }
     }
+  },
+  methods: {
+    getProfileImage: function getProfileImage() {
+      // const payLoad = {
+      // showImage:  "/storage/profile_images/"+ this.contact.id+"/"+this.contact.profile_image;
+      // return showImage;
+      // }
+      this.showImage = "/storage/profile_images/" + this.contact.id + "/" + this.contact.profile_image;
+      this.$emit('showImage', this.showImage);
+      return this.showImage;
+    }
+  },
+  emitMethod: function emitMethod() {
+    EventBus.$emit('showImage', payLoad);
   }
 });
 
@@ -2494,6 +2541,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     contact: {
@@ -2502,23 +2553,6 @@ __webpack_require__.r(__webpack_exports__);
     messages: {
       type: Array,
       required: true
-    }
-  },
-  methods: {
-    scrollToBottom: function scrollToBottom() {
-      var _this = this;
-
-      setTimeout(function () {
-        _this.$refs.provider.scrollTop = _this.$refs.provider.scrollHeight - _this.$refs.provider.clientHeight;
-      }, 50);
-    }
-  },
-  watch: {
-    contact: function contact(_contact) {
-      this.scrollToBottom();
-    },
-    messages: function messages(_messages) {
-      this.scrollToBottom();
     }
   }
 });
@@ -44383,7 +44417,7 @@ var render = function() {
         _c(
           "button",
           {
-            staticClass: "btn btn-outline-primary btn-sm",
+            staticClass: "btn btn-outline-success btn-sm",
             on: {
               click: function($event) {
                 return _vm.clearSearch()
@@ -44412,10 +44446,7 @@ var render = function() {
               _c("div", { staticClass: "placeholder" }, [
                 _c("div", { staticClass: "img-case" }, [
                   _c("img", {
-                    attrs: {
-                      src: "https://via.placeholder.com/150",
-                      alt: contact.name
-                    }
+                    attrs: { src: _vm.showImage, alt: contact.name }
                   })
                 ]),
                 _vm._v(" "),
@@ -44679,10 +44710,7 @@ var render = function() {
       _c("div", { staticClass: "image-area col-md-5" }, [
         _c("div", { staticClass: "profile-image-here" }, [
           _c("img", {
-            attrs: {
-              src: "https://via.placeholder.com/150",
-              alt: _vm.contact.name
-            }
+            attrs: { src: _vm.getProfileImage(), alt: _vm.contact.name }
           })
         ]),
         _vm._v(" "),
@@ -44922,35 +44950,43 @@ var render = function() {
           directives: [{ name: "chat-scroll", rawName: "v-chat-scroll" }],
           staticClass: "chat-output-box card"
         },
-        _vm._l(_vm.messages, function(message) {
-          return _c(
-            "div",
-            { key: message.id, staticClass: "chat-messages" },
-            _vm._l(message, function(item) {
-              return _c(
-                "ul",
-                {
-                  key: item.id,
-                  class:
-                    "message" +
-                    (item.to == _vm.contact.id ? " sent" : " received") +
-                    " "
-                },
-                [
-                  _c("li", [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(item.text) +
-                        "\n                "
+        [
+          _c("div", { staticClass: "output-box" }, [
+            _c(
+              "div",
+              { staticClass: "chat-border" },
+              _vm._l(_vm.messages, function(message) {
+                return _c(
+                  "div",
+                  { key: message.id, staticClass: "chat-messages" },
+                  _vm._l(message, function(item) {
+                    return _c(
+                      "ul",
+                      {
+                        key: item.id,
+                        class:
+                          "message" +
+                          (item.to == _vm.contact.id ? " sent" : " received") +
+                          " "
+                      },
+                      [
+                        _c("li", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(item.text) +
+                              "\n                        "
+                          )
+                        ])
+                      ]
                     )
-                  ])
-                ]
-              )
-            }),
-            0
-          )
-        }),
-        0
+                  }),
+                  0
+                )
+              }),
+              0
+            )
+          ])
+        ]
       )
     ]
   )

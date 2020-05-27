@@ -6,15 +6,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row mt-3">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
@@ -64,6 +64,24 @@
                             </div>
                         </div>
 
+                        {{-- add image --}}
+
+                        <div class="form-group row">
+                            <label for="profile_image" class="col-md-4 col-form-label text-md-right">Profile Image</label>
+
+                            <div class="col-md-6">
+                                <input id="profile_image" type="file" name="profile_image">
+
+                                @error('image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        {{-- add-image-end --}}
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-sm btn-outline-primary text-center" style="margin-left: 110px" >
@@ -78,15 +96,19 @@
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue" style="margin-top: 20rem">
+<div class="footer">
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
-    </div>
-    <!-- Copyright -->
+    <!-- Footer -->
+  <footer class="page-footer font-small blue" style="margin-top: 12rem">
 
-</footer>
-<!-- Footer -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
+      </div>
+      <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  </div>
 @endsection

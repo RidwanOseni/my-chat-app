@@ -146,9 +146,7 @@ export default {
 .app-game {
     justify-content: center;
     margin: 0px;
-    // padding-left: 10px ;
     position: relative;
-    // left: 80px;
     width: 100%;
 }
 .game-process

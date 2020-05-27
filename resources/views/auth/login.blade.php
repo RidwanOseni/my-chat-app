@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row mt-3">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -74,15 +74,19 @@
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue" style="margin-top: 20rem">
+<div class="footer">
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
-    </div>
-    <!-- Copyright -->
+    <!-- Footer -->
+  <footer class="page-footer font-small blue" style="margin-top: 17rem">
 
-</footer>
-<!-- Footer -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
+      </div>
+      <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  </div>
 @endsection

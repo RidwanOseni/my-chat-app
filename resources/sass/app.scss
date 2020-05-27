@@ -16,6 +16,18 @@
 {
     width: 540px;
     height: 500px;
+    border-radius: 10px;
+}
+
+// #carouselExampleIndicators .carousel-inner .carousel-item
+// {
+//     background: url(https://image.freepik.com/free-vector/dating-app-concept-with-man-woman_23-2148537265.jpg);
+//     background-size: cover;
+// }
+
+.outer-layer
+{
+    background-color: #BEC5AD;
 }
 
 .container
@@ -31,7 +43,6 @@
 .card-body
 {
     padding: 0px;
-    background: #B5B2C2;
 }
 
 .navbar-brand a
@@ -39,10 +50,21 @@
     color: blueviolet;
 }
 
+.nav-item a
+{
+    color:red;
+}
+
 .form-check-input
 {
     width: 16px !important;
     top: -18px;
+}
+
+.card-header
+{
+    padding: 0px !important;
+    border-bottom: 0px !important;
 }
 
 .form-check-label
@@ -57,10 +79,10 @@
 }
 
 .chat-header.row
-{
-    border: 1px solid #ccc;
+{   width: 558 !important;
+    border: 0px solid #ccc;
     border-bottom: none;
-    background-color: #C1CAD6 !important;
+    background-color: #7DDE92 !important;
     width: 100% !important;
     padding-left: 0px;
     margin-left: 0%;
@@ -124,7 +146,7 @@ color: #423e37;
 
 .chat-header-icon i
 {
-    color: #011638;
+    color: #FEF9FF;
     cursor: pointer;
     width: auto;
     padding: 5px;
@@ -180,25 +202,34 @@ color: #423e37;
 .msg-provider
 {
     width: 80% !important;
-    background-color: #ede3e4;
 }
+
 
 .chat-output-box
 {
     width: 100% !important;
     overflow: hidden;
-    padding: 0px !important;
+    padding: 10px !important;
     height: 100%;
     max-height: 600px;
     overflow: scroll;
-    background-color: #ede3e4;
+    background-color: #FEF9FF;
     color: #001514;
+}
+
+
+.chat-border
+{
+    border-radius: 20px !important;
+    height: 565px;
+    position: inherit;
 }
 
 .card
 {
     border: 0px !important;
 }
+
 ul
 {
     padding: 0px !important;
@@ -206,13 +237,12 @@ ul
 
 .contact-search
 {
-    background: #C1CAD6;
+    background: #EFEFF0;
 }
 
 ul.message
 {
     list-style-type: none;
-    // margin: 10px;
     width: 100%;
     padding: 5px;
 
@@ -225,11 +255,12 @@ ul.message
 
 .received li
 {
-    background-color: #c7d9b7;
+    background-color: #7f9183;
     border-radius: 5px;
     display: inline-block;
     max-width: 210px;
     padding-right: 10px;
+    padding-left: 5px;
     margin: 10px;
 }
 
@@ -240,17 +271,18 @@ ul.message
 
 .sent li
 {
-    background-color: #f1fffa;
+    background-color: #d0e3c4;
     border-radius: 5px;
     display: inline-block;
     max-width: 210px;
-    padding-left: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
     margin: 10px;
 }
 
 .contact.card-body
 {
-    background-color: #ede3e4;
+    background-color: #f8ffe5;
 }
 
 .btn
@@ -271,14 +303,13 @@ ul.message
 {
     list-style-type: none;
     padding-left: 0;
-    background-color: #ede3e4;
     height: 100%;
 
 }
 
 .selected
 {
-    background-color: #D1D3C4;
+    background-color: #C7CCB9;
 }
 
 .placeholder
@@ -289,7 +320,6 @@ ul.message
     height: 100px;
     position: relative;
     cursor: pointer;
-    // width: auto;
 }
 
 .placeholder img
@@ -308,6 +338,7 @@ ul.message
 {
     max-height: 600px;
     overflow: scroll;
+    overflow-x: hidden;
     padding: 0px;
 }
 
@@ -338,7 +369,7 @@ p.name
 
 span.unread
 {
-    background: #541388;
+    background: #35281d;
     color: white;
     position: absolute;
     right: 11px;
@@ -356,25 +387,24 @@ span.unread
 
 .chat-input-area
 {
-    height: 8rem;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px !important;
-    padding-bottom: 10px;
-    background-color: #C1CAD6;
+    height: 5rem;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px !important;
+    padding-bottom: 2px;
+    background-color: #7DDE92;
     width: 100%;
 }
 
 .input-field
 {
-    background-color: gray !important;
     width: 100% !important;
-    margin-right: 5px;
+    margin-right: 3px;
     border-radius: 10px !important;
     border: 2px;
-    padding: 10px 8px 10px 8px;
+    padding: 2px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 input {
@@ -385,11 +415,11 @@ input {
 
 .input-field-icon
 {
-    width: 20%;
+    width: 30%;
     padding-left: 10px;
     padding-top: 12px;
     float: right;
-    color: #011638;
+    color: black;
 }
 
 .input-field-icon i
@@ -406,40 +436,13 @@ input {
     border-radius: 10px;
 }
 
-.chatbot-section
-{
-    width: 100%;
-    background-color: #fbfff1;
-    border: none;
-
-}
-
-.chatbot-area
-{
-    width: auto;
-    background-color: #bed8d4;
-}
-
-.chatbot-output-box
-{
-    height: auto;
-    width: 100%;
-    padding: 0px !important;
-}
-
-.chatbot-header
-{
-    border: 1px solid #ccc;
-    border-bottom: none;
-    background-color: rgb(220, 255, 229) !important;
-    width: 100% !important;
-    padding-left: 0px;
-    margin-left: 0%;
-    margin-right: 0%;
-    height: 56px;
-}
 
 center
 {
     padding-top: 15px;
+}
+
+.footer
+{
+    background: #F5F1E3;
 }

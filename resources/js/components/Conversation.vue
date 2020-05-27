@@ -15,14 +15,18 @@
 <script>
 import MessagesProvider from './MessagesProvider.vue';
 import ContactsList from './ContactsList.vue';
+// import EventBus from "./eventBus";
+
 
 
 export default {
+
     props:{
         user: {
             type: Object,
             default: () => ({})
         },
+
         newMessage:{
             type:Object,
             default: {}
@@ -37,6 +41,7 @@ export default {
     },
 
     mounted() {
+
         Echo.private(`messages.${this.user.id}`)
             .listen('NewMessage', (e) => {
                 this.handleIncoming(e.message);
@@ -46,6 +51,10 @@ export default {
                     .then((response) => {
                         this.contacts = response.data;
                     });
+
+
+
+
             },
 
     watch:
@@ -58,7 +67,7 @@ export default {
     methods: {
 
             startConversationWith(contact) {
-            this.updateUnreadCount(contact, true);
+                this.updateUnreadCount(contact, true);
                     axios.get(`/conversation/${contact.id}`)
                     .then((response) => {
                         this.messages = [response.data];
@@ -67,6 +76,7 @@ export default {
                         this.saveNewMessage();
                     })
                 },
+
         saveNewMessage() {
            setTimeout(() => {
            }, 10000);

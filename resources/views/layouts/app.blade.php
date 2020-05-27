@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 {{-- <a class="navbar_title" style="font-weight:bolder; color:red; font-family: Arial " href="{{ url('/') }}">Chat<span style="color:blue">Tech</span>
 
@@ -37,9 +37,9 @@
                 {{-- <a class="navbar-brand" href="{{ url('/') }}"> --}}
                     {{-- {{ config('app.name', 'Laravel') }} --}}
                 {{-- </a> --}}
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> --}}
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -83,7 +83,7 @@
             </div>
         </nav>
 
-        <main class="py-0">
+        <main class="outer-layer py-0">
             @yield('content')
         </main>
     </div>

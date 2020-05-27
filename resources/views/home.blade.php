@@ -7,10 +7,11 @@
 
 
             <div class="private-chat-section col-md-8 offset-md-2">
-                <div class="card">
+                <div class="card mt-5 t-5">
                         <div class="card-header">
-                            <h3>ChatTech Messenger</h3>
+                            {{-- <h3>ChatTech Messenger</h3> --}}
                         </div>
+
                         <div class="card-body" id="app">
                             <app-chat :user="{{ auth()->user() }}"></app-chat>
                         </div>
@@ -24,17 +25,21 @@
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue">
+<div class="footer">
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
-    </div>
-    <!-- Copyright -->
+    <!-- Footer -->
+  <footer class="page-footer font-small blue" style="margin-top: 10rem">
 
-</footer>
-<!-- Footer -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> ChatTech Inc.</a>
+      </div>
+      <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  </div>
 @endsection
 
 
